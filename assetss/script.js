@@ -1,5 +1,6 @@
 $(document).ready(function () {
     // alert("Hello")
+    $('#sidebar-hide').hide()
     $('#btn-toggleclick').on('click', function () {
        $(".sidebar").toggle(1000)
     //    if ("#btn-toggleclick") {
@@ -9,14 +10,6 @@ $(document).ready(function () {
     //    }
     });
 });
-
- // Put the HTML IDs in Variables
- var trf = document.getElementById("trf");
- var sf = document.getElementById("sf");
- var sd = document.getElementById("sd");
- var as = document.getElementById("as");
- var nas = document.getElementById("nas"); 
- var otd = document.getElementById("otd");
 
 fetch("https://fambook.online/adminboard")
 .then(function (resp) {
@@ -30,11 +23,7 @@ fetch("https://fambook.online/adminboard")
     $('#sd').html(dataArray.SD);
     $('#as').html(dataArray.AS);
     $('#nas').html(dataArray.NAS);
-    // $('#otd').html(dataArray.TRF);
-
-    
-
-    // The function calls itself here
+    // $('#otd').html(dataArray.TRF); TESTRUN
 })
 .catch(function (err) {
   console.log(err);
